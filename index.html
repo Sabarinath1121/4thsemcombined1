@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cloud + AI Web System Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #5a3e2b;
+  color: white;
+}
+
+header {
+  background: black;
+  padding: 15px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  margin: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.container {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+input, button {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background: brown;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkred;
+}
+
+#msg {
+  color: green;
+  font-weight: bold;
+}
+
+pre {
+  background: black;
+  padding: 10px;
+  overflow-x: auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🎯 Web-Based System using Cloud & AI</h1>
+</header>
+
+<!-- SYSTEM UI -->
+<section>
+  <h2>🎉 Event Registration System (Prototype)</h2>
+
+  <div class="container">
+    <form onsubmit="registerUser(event)">
+      <input type="text" id="name" placeholder="Enter Name" required>
+      <input type="email" id="email" placeholder="Enter Email" required>
+      <button type="submit">Register</button>
+    </form>
+    <p id="msg"></p>
+  </div>
+</section>
+
+<!-- SOFTWARE ENGINEERING -->
+<section>
+<h2>1️⃣ Software Engineering</h2>
+
+<h3>Problem Statement</h3>
+<p>A simple web system is needed to allow users to register for an event online easily.</p>
+
+<h3>Functional Requirements</h3>
+<ul>
+<li>User enters name and email</li>
+<li>System validates input</li>
+<li>Displays confirmation message</li>
+<li>Stores/logs user data</li>
+</ul>
+
+<h3>User Stories</h3>
+<ul>
+<li>As a user, I want to register so that I can attend the event</li>
+<li>As a user, I want confirmation so that I know I registered successfully</li>
+<li>As an admin, I want user data so that I can manage participants</li>
+</ul>
+
+<h3>System Architecture</h3>
+<pre>
+Client (Browser)
+      ↓
+Cloud Hosting (Cloudflare Pages / AWS S3)
+      ↓
+Storage / API (Optional)
+</pre>
+
+<h3>Workflow</h3>
+<ol>
+<li>User opens website</li>
+<li>Enters details</li>
+<li>Clicks register</li>
+<li>System shows confirmation</li>
+</ol>
+</section>
+
+<!-- CLOUD -->
+<section>
+<h2>2️⃣ Cloud Computing</h2>
+
+<h3>Serverless Hosting</h3>
+<p>Serverless hosting means you don’t manage servers. The cloud provider handles everything.</p>
+
+<h3>Why Suitable?</h3>
+<ul>
+<li>No backend needed</li>
+<li>Low cost</li>
+<li>Easy deployment</li>
+<li>Scalable</li>
+</ul>
+
+<h3>Deployment Steps</h3>
+<ol>
+<li>Open Cloudflare Pages or AWS S3</li>
+<li>Upload this HTML file</li>
+<li>Click deploy</li>
+<li>Get live URL</li>
+</ol>
+
+<p><b>Deployment URL:</b> (Paste your link here)</p>
+</section>
+
+<!-- AI -->
+<section>
+<h2>3️⃣ Artificial Intelligence Usage</h2>
+
+<h3>Sample Prompts</h3>
+<pre>
+Generate HTML event registration form
+Improve CSS UI design
+Create system documentation
+Explain serverless hosting simply
+</pre>
+
+<h3>How AI Helped</h3>
+<ul>
+<li>Generated HTML code</li>
+<li>Improved UI design</li>
+<li>Created documentation</li>
+<li>Simplified explanations</li>
+</ul>
+
+<h3>Reflection</h3>
+<p>
+AI tools like ChatGPT helped speed up development by generating code, improving design, and assisting with documentation.
+It reduced manual effort and made complex concepts easier to understand. However, validation is important to ensure correctness.
+AI should be used responsibly by understanding outputs and avoiding plagiarism. It improves productivity but should not replace
+human thinking. Ethical use includes verifying content, ensuring originality, and using AI as a support tool.
+</p>
+
+<h3>Ethical Considerations</h3>
+<ul>
+<li>Verify AI outputs</li>
+<li>Avoid plagiarism</li>
+<li>Understand generated code</li>
+<li>Use responsibly</li>
+</ul>
+</section>
+
+<!-- FOOTER -->
+<section>
+<h2>📦 Submission Checklist</h2>
+<ul>
+<li>✔ Live deployment link</li>
+<li>✔ Single HTML file</li>
+<li>✔ Documentation included</li>
+<li>✔ AI prompts & reflection</li>
+</ul>
+</section>
+
+<script>
+function registerUser(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+
+  document.getElementById("msg").innerHTML =
+    "✅ Thank you " + name + "! Registration successful.";
+
+  console.log({name, email});
+
+  document.querySelector("form").reset();
+}
+</script>
+
+</body>
+</html>
